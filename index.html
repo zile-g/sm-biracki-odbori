@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бирачки одбори – Сремска Митровица</title>
+<meta name="description" content="Пронађите своје бирачко место и улогу у бирачком одбору – Град Сремска Митровица, избори за народне посланике 25. октобра 2026.">
+<meta property="og:title" content="Где сам распоређен у бирачком одбору? – Сремска Митровица">
+<meta property="og:description" content="Унесите име и презиме и преузмите решење о именовању (стални и проширени састав).">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0b4d8c">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b4d8c'/%3E%3Cpath d='M9 16.5l4.5 4.5L23 11' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #f5f6f8; --card: #ffffff; --text: #16202c; --muted: #5b6878; --line: #dde2e8;
+    --accent: #0b4d8c; --accent-text: #ffffff; --accent-soft: #e6eef7; --warn: #7a4f00; --warn-soft: #fff5e0;
+    --stalni: #0b6b4f; --stalni-soft: #e3f4ee; --prosireni: #6b3fa0; --prosireni-soft: #f0e9f8;
+    --hl: #fff1a8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0f141a; --card: #18202a; --text: #e7ecf2; --muted: #9aa7b6; --line: #2a3542;
+      --accent: #5aa2e6; --accent-text: #0b1520; --accent-soft: #1b2b3d; --warn: #f0c36b; --warn-soft: #2e2515;
+      --stalni: #5fd0a8; --stalni-soft: #15302a; --prosireni: #c3a1ef; --prosireni-soft: #2a2138;
+      --hl: #4a4216;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  .top { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+  .script { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--card); }
+  .script button { border: 0; background: none; color: var(--muted); padding: 5px 14px; font-size: .85rem; font-weight: 600; cursor: pointer; border-radius: 0; }
+  .script button[aria-pressed="true"] { background: var(--accent); color: var(--accent-text); }
+  header h1 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 6px; }
+  header p { margin: 0; color: var(--muted); }
+  form { margin: 24px 0 8px; display: grid; grid-template-columns: 1fr 1fr auto; gap: 10px; }
+  label { display: block; font-size: .85rem; color: var(--muted); margin-bottom: 4px; }
+  input { width: 100%; padding: 12px 14px; font-size: 1rem; border: 1px solid var(--line); border-radius: 10px;
+    background: var(--card); color: var(--text); }
+  input:focus { outline: 2px solid var(--accent); outline-offset: 1px; border-color: transparent; }
+  .go { align-self: end; padding: 12px 20px; font-size: 1rem; font-weight: 600; border: 0; border-radius: 10px;
+    background: var(--accent); color: var(--accent-text); cursor: pointer; }
+  .hint { font-size: .85rem; color: var(--muted); margin: 0 0 20px; }
+  .status { margin: 20px 0 12px; color: var(--muted); }
+  .notice { background: var(--warn-soft); color: var(--warn); padding: 10px 14px; border-radius: 10px; margin: 16px 0 12px; font-size: .95rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 18px; margin-bottom: 14px; }
+  .card h2 { font-size: 1.2rem; margin: 0 0 4px; }
+  .role { font-weight: 600; }
+  .badge { display: inline-block; font-size: .8rem; font-weight: 600; padding: 2px 10px; border-radius: 999px; margin-left: 6px; vertical-align: 2px; }
+  .badge.stalni { background: var(--stalni-soft); color: var(--stalni); }
+  .badge.prosireni { background: var(--prosireni-soft); color: var(--prosireni); }
+  .station { margin: 12px 0 0; padding: 12px 14px; background: var(--accent-soft); border-radius: 10px; }
+  .station .no { font-size: 1.1rem; font-weight: 700; }
+  .station .addr { color: var(--muted); font-size: .92rem; }
+  dl { margin: 12px 0 0; display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; font-size: .93rem; }
+  dt { color: var(--muted); }
+  dd { margin: 0; }
+  .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  .actions a { text-decoration: none; padding: 9px 16px; border-radius: 10px; font-weight: 600; font-size: .95rem; }
+  .actions a.primary { background: var(--accent); color: var(--accent-text); }
+  .actions a.secondary { border: 1px solid var(--line); color: var(--text); }
+  details { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 10px; }
+  summary { cursor: pointer; color: var(--accent); font-weight: 600; font-size: .93rem; }
+  .board { list-style: none; margin: 10px 0 0; padding: 0; font-size: .92rem; }
+  .board li { display: grid; grid-template-columns: 11em 1fr; gap: 10px; padding: 5px 8px; border-radius: 6px; }
+  .board li:nth-child(odd) { background: var(--bg); }
+  .board li.me { background: var(--hl); font-weight: 600; }
+  .board .r { color: var(--muted); }
+  footer { margin-top: 40px; font-size: .85rem; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; }
+  footer a { color: var(--accent); }
+  @media (max-width: 600px) {
+    form { grid-template-columns: 1fr; }
+    .go { width: 100%; }
+    header h1 { font-size: 1.35rem; }
+    .board li { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="script" role="group" aria-label="Писмо / Pismo">
+      <button type="button" data-script="cyr" aria-pressed="true">Ћирилица</button>
+      <button type="button" data-script="lat" aria-pressed="false">Latinica</button>
+    </div>
+  </div>
+  <header>
+    <h1 data-t>Где сам распоређен у бирачком одбору?</h1>
+    <p data-t>Град Сремска Митровица · Избори за народне посланике, 25. октобар 2026.</p>
+  </header>
+
+  <form id="f" autocomplete="off" role="search">
+    <div><label for="ime" data-t>Име</label><input id="ime" name="ime" data-tp="нпр. Петар" placeholder="нпр. Петар" autofocus></div>
+    <div><label for="prezime" data-t>Презиме</label><input id="prezime" name="prezime" data-tp="нпр. Петровић" placeholder="нпр. Петровић"></div>
+    <button class="go" type="submit" data-t>Претражи</button>
+  </form>
+  <p class="hint" data-t>Можете писати ћирилицом или латиницом, са или без квачица (c, s, z уместо ч/ћ, ш, ж).</p>
+
+  <div id="out" aria-live="polite"></div>
+
+  <footer>
+    <span data-t>Подаци су аутоматски преузети из решења Изборне комисије Града Сремска Митровица о именовању бирачких одбора (стални и проширени састав), објављених на сајту</span>
+    <a href="https://www.rik.parlament.gov.rs/dokumenta/41985" target="_blank" rel="noopener" data-t>Републичке изборне комисије</a>.
+    <span data-t>Свако име је прочитано двапут, независно, а сва неслагања су ручно проверена на скенираном документу. Ипак,</span>
+    <strong data-t>меродавно је решење у PDF-у.</strong> <span id="count"></span>
+  </footer>
+</div>
+
+<script>
+// ---------- script (Cyrillic / Latin) ----------
+const LAT = {"А":"A","Б":"B","В":"V","Г":"G","Д":"D","Ђ":"Đ","Е":"E","Ж":"Ž","З":"Z","И":"I","Ј":"J","К":"K","Л":"L",
+  "Љ":"Lj","М":"M","Н":"N","Њ":"Nj","О":"O","П":"P","Р":"R","С":"S","Т":"T","Ћ":"Ć","У":"U","Ф":"F","Х":"H","Ц":"C",
+  "Ч":"Č","Џ":"Dž","Ш":"Š"};
+for (const [k, v] of Object.entries(LAT)) LAT[k.toLowerCase()] = v.toLowerCase();
+const toLat = s => String(s).replace(/[Ѐ-ӿ]/g, (c, i, str) => {
+  const v = LAT[c]; if (!v) return c;
+  // all-caps words keep digraphs upper-case (ЉУБА -> LJUBA)
+  return v.length > 1 && c === c.toUpperCase() && /[А-ЯЂЈЉЊЋЏ]/.test(str[i + 1] || "") ? v.toUpperCase() : v;
+});
+let script = "cyr";
+try { script = localStorage.getItem("script") === "lat" ? "lat" : "cyr"; } catch (e) {}
+const T = s => script === "lat" ? toLat(s) : s;
+
+function applyScript() {
+  document.documentElement.lang = script === "lat" ? "sr-Latn" : "sr";
+  document.querySelectorAll("[data-t]").forEach(el => {
+    if (!el.dataset.orig) el.dataset.orig = el.textContent;
+    el.textContent = T(el.dataset.orig);
+  });
+  document.querySelectorAll("[data-tp]").forEach(el => el.placeholder = T(el.dataset.tp));
+  document.querySelectorAll(".script button").forEach(b => b.setAttribute("aria-pressed", b.dataset.script === script));
+  document.title = T("Бирачки одбори – Сремска Митровица");
+  if (DATA.length) { setCount(); if (last) render(last); }
+}
+document.querySelectorAll(".script button").forEach(b => b.addEventListener("click", () => {
+  script = b.dataset.script;
+  try { localStorage.setItem("script", script); } catch (e) {}
+  applyScript();
+}));
+
+// ---------- search ----------
+const CYR = {"а":"a","б":"b","в":"v","г":"g","д":"d","ђ":"d","е":"e","ж":"z","з":"z","и":"i","ј":"j","к":"k",
+  "л":"l","љ":"l","м":"m","н":"n","њ":"n","о":"o","п":"p","р":"r","с":"s","т":"t","ћ":"c","у":"u","ф":"f",
+  "х":"h","ц":"c","ч":"c","џ":"dz","ш":"s"};
+function skel(s) {
+  s = (s || "").toLowerCase().normalize("NFC");
+  s = s.replace(/[а-яђјљњћџ]/g, c => CYR[c] ?? c);
+  s = s.replace(/[ćč]/g, "c").replace(/š/g, "s").replace(/ž/g, "z").replace(/đ/g, "d").replace(/dž/g, "dz");
+  s = s.normalize("NFD").replace(/[̀-ͯ]/g, "");
+  s = s.replace(/dj/g, "d").replace(/lj/g, "l").replace(/nj/g, "n");
+  return s.replace(/[^a-z]+/g, " ").trim();
+}
+function lev(a, b) {
+  if (Math.abs(a.length - b.length) > 2) return 9;
+  let prev = Array.from({length: b.length + 1}, (_, i) => i);
+  for (let i = 1; i <= a.length; i++) {
+    const cur = [i];
+    for (let j = 1; j <= b.length; j++)
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    prev = cur;
+  }
+  return prev[b.length];
+}
+const TESTS = {
+  exact: (q, t) => q === t,
+  prefix: (q, t) => q.length >= 2 && t.startsWith(q),
+  fuzzy: (q, t) => q.length >= 3 && lev(q, t) <= (q.length >= 6 ? 2 : 1),
+};
+// every query word must match a different word of the person's name (order and field don't matter)
+function matches(qs, toks, test) {
+  const used = new Set();
+  return qs.every(q => {
+    const i = toks.findIndex((t, i) => !used.has(i) && test(q, t));
+    if (i < 0) return false;
+    used.add(i); return true;
+  });
+}
+function search(first, lastName) {
+  const qs = skel(first + " " + lastName).split(" ").filter(Boolean);
+  if (qs.join("").length < 2) return {kind: "short", rows: []};
+  for (const kind of ["exact", "prefix", "fuzzy"]) {
+    const rows = DATA.filter(p => matches(qs, p._t, TESTS[kind]));
+    if (rows.length) return {kind: kind === "fuzzy" ? "fuzzy" : "exact", rows};
+  }
+  return {kind: "none", rows: []};
+}
+
+// ---------- rendering ----------
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const E = s => esc(T(s));
+let DATA = [], BOARDS = {}, last = null;
+const out = document.getElementById("out");
+
+function card(p) {
+  const comp = p.composition.startsWith("Стални") ? "stalni" : "prosireni";
+  const addr = p.address || p.station;
+  const board = BOARDS[p.pdf].map(m =>
+    `<li class="${m === p ? "me" : ""}"><span class="r">${E(m.role)}</span><span>${E(m.first)} ${E(m.last)}</span></li>`).join("");
+  const fname = `${T("Решење")} БМ ${p.station_no} – ${T(p.composition)}.pdf`;
+  return `<article class="card">
+    <h2>${E(p.first)} ${E(p.last)}</h2>
+    <div><span class="role">${E(p.role)}</span><span class="badge ${comp}">${E(p.composition)}</span></div>
+    <div class="station">
+      <div class="no">${T("Бирачко место бр.")} ${p.station_no}</div>
+      <div>${E(p.station)}</div>
+      ${addr && addr !== p.station ? `<div class="addr">${E(addr)}</div>` : ""}
+    </div>
+    <dl><dt>${T("Предлагач")}</dt><dd>${E(p.nominator || "—")}</dd></dl>
+    <div class="actions">
+      <a class="primary" href="${p.pdf}" download="${esc(T(fname))}">${T("Преузми PDF")}</a>
+      <a class="secondary" href="${p.pdf}" target="_blank" rel="noopener">${T("Отвори решење")}</a>
+    </div>
+    <details><summary>${T("Цео бирачки одбор")} (${BOARDS[p.pdf].length})</summary><ul class="board">${board}</ul></details>
+  </article>`;
+}
+
+function render({kind, rows}) {
+  if (kind === "short") { out.innerHTML = ""; return; }
+  if (kind === "none") {
+    out.innerHTML = `<p class="status">${T("Нисмо пронашли никога са тим именом у бирачким одборима Града Сремска Митровица. Проверите правопис или унесите само презиме.")}</p>`;
+    return;
+  }
+  const head = kind === "fuzzy"
+    ? `<div class="notice">${T("Нема тачног поклапања. Можда сте мислили на:")}</div>`
+    : `<p class="status">${rows.length === 1 ? T("Пронађен 1 резултат") : T("Пронађено резултата: ") + rows.length}</p>`;
+  out.innerHTML = head + rows.slice(0, 30).map(card).join("") +
+    (rows.length > 30 ? `<p class="status">${T("Приказано првих 30 – унесите и име и презиме да сузите претрагу.")}</p>` : "");
+}
+
+function run(push) {
+  const f = document.getElementById("ime").value, l = document.getElementById("prezime").value;
+  const res = search(f, l);
+  res.rows.sort((a, b) => a.station_no - b.station_no || a.composition.localeCompare(b.composition));
+  last = res;
+  render(res);
+  if (push) {
+    const u = new URL(location.href);
+    f.trim() ? u.searchParams.set("ime", f.trim()) : u.searchParams.delete("ime");
+    l.trim() ? u.searchParams.set("prezime", l.trim()) : u.searchParams.delete("prezime");
+    history.replaceState(null, "", u);
+  }
+}
+
+let timer;
+document.getElementById("f").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(() => run(true), 250); });
+document.getElementById("f").addEventListener("submit", e => { e.preventDefault(); clearTimeout(timer); run(true); });
+
+function setCount() {
+  document.getElementById("count").textContent = T(`Укупно ${DATA.length} именовања на 60 бирачких места.`);
+}
+
+applyScript();
+fetch("data.json").then(r => r.json()).then(d => {
+  DATA = d.map(p => ({...p, _t: skel(p.first + " " + p.last).split(" ")}));
+  for (const p of DATA) (BOARDS[p.pdf] ||= []).push(p);
+  setCount();
+  const q = new URLSearchParams(location.search);
+  if (q.get("ime") || q.get("prezime")) {
+    document.getElementById("ime").value = q.get("ime") || "";
+    document.getElementById("prezime").value = q.get("prezime") || "";
+    run(false);
+  }
+}).catch(() => { out.innerHTML = `<p class="status">${T("Грешка при учитавању података. Освежите страницу.")}</p>`; });
+</script>
+</body>
+</html>
